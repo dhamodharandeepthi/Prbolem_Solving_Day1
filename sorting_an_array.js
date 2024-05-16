@@ -21,8 +21,9 @@ console.log(temp); //[ 4, 5, 9 ]
 console.log(arr); //[ Infinity, Infinity, Infinity ]
 */
 //method2
-let arr = [9, 4, 5];
-console.log(arr.length); //3
+let arr = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100));
+console.log(arr.length); //10
+console.log(arr);
 
 for (let ind = 0; ind < arr.length; ind++) {
   let minInd = ind;
@@ -31,10 +32,12 @@ for (let ind = 0; ind < arr.length; ind++) {
       minInd = ind1;
     }
   }
-  temp = arr[ind]; //5,4,9
+  temp = arr[ind];
   arr[ind] = arr[minInd];
-  arr[minInd] = temp; //firstloop => [4,9,5] second loop => [4,5,9]
+  arr[minInd] = temp;
 }
 
-console.log(arr); //[ 4, 5, 9 ]
-console.log(...arr); //4 5 9
+console.log(arr);
+console.log(...arr);
+//Time complexity =O(n^2)  //[O(n)*O(n)=O(n^2)] // O(n)=>one loop
+//space complexcity:O(n)  //n=1 => O(1)
