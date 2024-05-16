@@ -25,16 +25,14 @@ let arr = [9, 4, 5];
 console.log(arr.length); //3
 
 for (let ind = 0; ind < arr.length; ind++) {
-  let min = arr[ind];
   let minInd = ind;
   for (let ind1 = ind + 1; ind1 < arr.length; ind1++) {
-    if (min > arr[ind1]) {
-      min = arr[ind1];
+    if (arr[minInd] > arr[ind1]) {
       minInd = ind1;
     }
   }
   temp = arr[ind]; //5,4,9
-  arr[ind] = min;
+  arr[ind] = arr[minInd];
   arr[minInd] = temp; //firstloop => [4,9,5] second loop => [4,5,9]
 }
 
