@@ -39,3 +39,8 @@ function isPrime(num) {
 
 console.log("Given OddNumber is prime number?: ", isPrime(101)); //true
 console.log("Number of Iteration: ", count); //Number of Iteration: 06
+/*
+The time complexity of the provided isPrime function is O(sqrt(n)), where n is the input number. This is because the function iterates up to the square root of the input number to check for divisibility. Specifically, the loop runs until fact * fact <= num, which means it iterates up to the square root of num.
+
+The space complexity of the function is O(1), as it uses a constant amount of memory regardless of the input size.
+*/
