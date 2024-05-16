@@ -1,9 +1,25 @@
 //what is prime?
 // A number is only divisible by 1 and itself
 //2,3,5,7,11,13,17,19,23....
+
+//to know factor
+/*
+factor=a*b
+factor of 100 => 1,2,4,5,10,20,25,100
+note:
+ * always 1 and given number is comes us factor so we remove them
+ * if 2 is factor 2*50=100 then 50 is also factor of 100
+ * if 4 is factor 4*25=100 then 25 is also factor of 100
+ * if 5 is factor 5*20=100 then 20 is also factor of 100
+ * if 10 is factor 10*10=100 then 10 is final factor of 100
+ * so n is factor n*n=givennumber then num is final factor of 100
+ * means sqrt(100) =>10
+ * means sqrt(givennumber) =>final factor
+*/
+
 let count = 0;
 function isPrime(num) {
-  for (let fact = 2; fact < num; fact++) {
+  for (let fact = 2; fact <= Math.sqrt(num); fact++) {
     count++;
     if (num % fact == 0) {
       return false;
@@ -12,11 +28,5 @@ function isPrime(num) {
   return true;
 }
 
-console.log("Given EvenNumber is prime number?: ", isPrime(101)); //true
-console.log("Number of Iteration: ", count); //Number of Iteration:  99
-/*
-
-The time complexity of the provided isPrime function is O(n), where n is the input number. This is because, in the worst case, the function checks divisibility of the input number by all numbers from 2 up to the input number minus 1. that means (n-1)
-
-The space complexity of the function is O(1), because it uses a fixed amount of memory regardless of the input size. The space used by the function remains constant, as it doesn't depend on the input number.
-*/
+console.log("Given OddNumber is prime number?: ", isPrime(101)); //true
+console.log("Number of Iteration: ", count); //Number of Iteration: 09
