@@ -38,6 +38,7 @@ for (let ind = 0; ind < arr.length; ind++) {
 }
 
 console.log(arr);
+console.log("Minium element from an array:", arr[0]);
 console.log(...arr);
 //Time complexity =O(n^2)  //[O(n)*O(n)=O(n^2)] // O(n)=>one loop
 //space complexcity:O(n)  //n=1 => O(1)
