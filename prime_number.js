@@ -15,11 +15,12 @@ note:
  * so n is factor n*n=givennumber then num is final factor of 100
  * means sqrt(100) =>10
  * means sqrt(givennumber) =>final factor
+ * in this case Math function called every looping it takes some time to give output if given number is largePrimeNumber 
 */
 
 let count = 0;
 function isPrime(num) {
-  for (let fact = 2; fact <= Math.sqrt(num); fact++) {
+  for (let fact = 2; fact * fact <= num; fact++) {
     count++;
     if (num % fact == 0) {
       return false;
