@@ -16,11 +16,12 @@ note:
  * means sqrt(100) =>10
  * means sqrt(givennumber) =>final factor
  * in this case Math function called every looping it takes some time to give output if given number is largePrimeNumber 
+ * Take input as half of the given number which is same as take input as given number both result same
 */
 
 let count = 0;
 function isPrime(num) {
-  for (let fact = 2; fact * fact <= num; fact++) {
+  for (let fact = 2; fact * fact <= num / 2; fact++) {
     count++;
     if (num % fact == 0) {
       return false;
@@ -30,4 +31,4 @@ function isPrime(num) {
 }
 
 console.log("Given OddNumber is prime number?: ", isPrime(101)); //true
-console.log("Number of Iteration: ", count); //Number of Iteration: 09
+console.log("Number of Iteration: ", count); //Number of Iteration: 06
